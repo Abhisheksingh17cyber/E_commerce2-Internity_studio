@@ -37,14 +37,14 @@ export function TextReveal({
   const itemVariants = {
     fade: {
       hidden: { opacity: 0 },
-      visible: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+      visible: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" as const } },
     },
     slide: {
       hidden: { opacity: 0, y: 50 },
       visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+        transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
       },
     },
     mask: {
@@ -52,10 +52,10 @@ export function TextReveal({
       visible: {
         opacity: 1,
         y: "0%",
-        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
       },
     },
-  };
+  } as const;
 
   return (
     <motion.span
