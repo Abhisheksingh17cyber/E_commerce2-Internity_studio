@@ -87,13 +87,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-white/80 text-sm tracking-[0.3em] uppercase mb-6"
+            className="text-gold-400 text-sm tracking-[0.3em] uppercase mb-6 font-sans"
           >
             New Collection 2026
           </motion.p>
 
           {/* Main Heading */}
-          <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-light tracking-tight mb-8">
+          <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight mb-8">
             <TextReveal delay={0.5} splitBy="word" type="slide">
               Effortless Elegance
             </TextReveal>
@@ -104,7 +104,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-12 font-light"
+            className="text-white/80 text-lg md:text-xl max-w-xl mx-auto mb-12 font-sans"
           >
             Discover timeless pieces crafted for the modern wardrobe. 
             Sustainable luxury meets contemporary design.
@@ -120,14 +120,14 @@ export function Hero() {
             <Button
               variant="primary"
               size="lg"
-              className="bg-white text-stone-900 hover:bg-stone-100 min-w-[200px]"
+              className="bg-gold-500 text-neutral-950 hover:bg-gold-400 min-w-[200px] font-sans"
             >
               Shop Collection
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-stone-900 min-w-[200px]"
+              className="border-white text-white hover:bg-white hover:text-neutral-950 min-w-[200px] font-sans"
             >
               Explore Lookbook
             </Button>

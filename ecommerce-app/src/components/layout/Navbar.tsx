@@ -50,7 +50,7 @@ export function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="text-2xl font-light tracking-[0.2em] text-stone-900"
+              className="text-2xl font-serif tracking-[0.2em] text-neutral-900"
             >
               ATELIER
             </Link>
@@ -66,7 +66,7 @@ export function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="text-sm tracking-wider text-stone-700 hover:text-stone-900 transition-colors py-2"
+                    className="text-sm tracking-wider text-neutral-700 hover:text-gold-600 font-sans transition-colors py-2"
                   >
                     {item.label}
                   </Link>
@@ -86,7 +86,7 @@ export function Navbar() {
                             <Link
                               key={child.label}
                               href={child.href}
-                              className="block px-6 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-50 transition-colors"
+                              className="block px-6 py-2 text-sm text-neutral-600 hover:text-gold-600 hover:bg-neutral-50 font-sans transition-colors"
                             >
                               {child.label}
                             </Link>
@@ -103,7 +103,7 @@ export function Navbar() {
             <div className="flex items-center gap-6">
               {/* Search */}
               <button
-                className="p-2 text-stone-700 hover:text-stone-900 transition-colors"
+                className="p-2 text-neutral-700 hover:text-gold-600 transition-colors"
                 aria-label="Search"
               >
                 <svg
@@ -124,7 +124,7 @@ export function Navbar() {
 
               {/* Account */}
               <button
-                className="hidden sm:block p-2 text-stone-700 hover:text-stone-900 transition-colors"
+                className="hidden sm:block p-2 text-neutral-700 hover:text-gold-600 transition-colors"
                 aria-label="Account"
               >
                 <svg
@@ -145,7 +145,7 @@ export function Navbar() {
 
               {/* Cart */}
               <button
-                className="relative p-2 text-stone-700 hover:text-stone-900 transition-colors"
+                className="relative p-2 text-neutral-700 hover:text-gold-600 transition-colors"
                 aria-label="Cart"
               >
                 <svg
@@ -162,7 +162,7 @@ export function Navbar() {
                     d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
                   />
                 </svg>
-                <span className="absolute -top-1 -right-1 w-4 h-4 bg-stone-900 text-white text-xs rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-gold-500 text-neutral-950 text-xs rounded-full flex items-center justify-center">
                   0
                 </span>
               </button>
@@ -170,7 +170,7 @@ export function Navbar() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-stone-700 hover:text-stone-900 transition-colors"
+                className="lg:hidden p-2 text-neutral-700 hover:text-gold-600 transition-colors"
                 aria-label="Toggle menu"
               >
                 <div className="w-6 h-4 relative flex flex-col justify-between">

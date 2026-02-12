@@ -5,52 +5,38 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { brandValues } from "@/data";
-import { Heading } from "@/components/ui/Typography";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function BrandValues() {
   const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
-    const header = headerRef.current;
     const cards = cardsRef.current;
 
-    if (!section || !header || !cards) return;
+    if (!section || !cards) return;
 
     const cardElements = cards.querySelectorAll(".value-card");
 
-    // Pin header on scroll
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: "bottom bottom",
-      pin: header,
-      pinSpacing: false,
-    });
-
     // Animate cards on scroll
-    cardElements.forEach((card, index) => {
+    cardElements.forEach((card) => {
       gsap.fromTo(
         card,
         {
           opacity: 0,
-          y: 100,
-          scale: 0.9,
+          y: 60,
         },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 1,
+          duration: 0.8,
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
-            start: "top 80%",
-            end: "top 30%",
+            start: "top 85%",
+            end: "top 50%",
             toggleActions: "play none none reverse",
           },
         }
@@ -63,28 +49,25 @@ export function BrandValues() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-stone-950 text-white">
-      {/* Pinned Header */}
-      <div
-        ref={headerRef}
-        className="h-screen flex items-center justify-center"
-      >
-        <div className="text-center">
+    <section ref={sectionRef} className="bg-neutral-950 text-white py-32 lg:py-40">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Section Header */}
+        <div className="text-center mb-20 lg:mb-28">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-stone-400 text-sm tracking-[0.3em] uppercase mb-6"
+            className="text-gold-400 text-sm tracking-[0.3em] uppercase mb-6 font-sans"
           >
             Our Philosophy
           </motion.p>
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-tight">
             <motion.span
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="block"
+              className="block text-white"
             >
               Crafted with
             </motion.span>
@@ -93,33 +76,29 @@ export function BrandValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="block text-stone-400"
+              className="block text-gold-400 italic"
             >
               Intention
             </motion.span>
           </h2>
         </div>
-      </div>
 
-      {/* Value Cards */}
-      <div ref={cardsRef} className="relative z-10 pb-32">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {brandValues.map((value, index) => (
-              <div
-                key={value.title}
-                className="value-card bg-stone-900/50 backdrop-blur-sm p-10 md:p-12 lg:p-16 border border-stone-800"
-              >
-                <span className="text-4xl mb-8 block">{value.icon}</span>
-                <h3 className="text-2xl md:text-3xl font-light tracking-tight mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-stone-400 text-lg leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Value Cards */}
+        <div ref={cardsRef} className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {brandValues.map((value, index) => (
+            <div
+              key={value.title}
+              className="value-card group bg-neutral-900/60 backdrop-blur-sm p-8 md:p-10 lg:p-14 border border-neutral-800 hover:border-gold-600/40 transition-colors duration-500"
+            >
+              <span className="text-3xl mb-6 block text-gold-400">{value.icon}</span>
+              <h3 className="text-xl md:text-2xl font-serif tracking-tight mb-3 text-white">
+                {value.title}
+              </h3>
+              <p className="text-neutral-400 leading-relaxed font-sans">
+                {value.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -38,9 +38,9 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <footer ref={ref} className="bg-stone-950 text-white">
+    <footer ref={ref} className="bg-neutral-950 text-white">
       {/* Newsletter Section */}
-      <div className="border-b border-stone-800">
+      <div className="border-b border-neutral-800">
         <div className="container mx-auto px-6 lg:px-12 py-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -48,10 +48,10 @@ export function Footer() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h3 className="text-3xl md:text-4xl font-light tracking-tight mb-4">
+            <h3 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">
               Join Our World
             </h3>
-            <p className="text-stone-400 mb-8">
+            <p className="text-neutral-400 mb-8 font-sans">
               Subscribe for exclusive access to new collections, private events,
               and 10% off your first order.
             </p>
@@ -59,11 +59,11 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-transparent border-b border-stone-700 px-4 py-3 text-white placeholder:text-stone-500 focus:outline-none focus:border-white transition-colors"
+                className="flex-1 bg-transparent border-b border-neutral-700 px-4 py-3 text-white placeholder:text-neutral-500 focus:outline-none focus:border-gold-400 transition-colors font-sans"
               />
               <button
                 type="submit"
-                className="bg-white text-stone-900 px-8 py-3 text-sm tracking-wider uppercase hover:bg-stone-200 transition-colors"
+                className="bg-gold-500 text-neutral-950 px-8 py-3 text-sm tracking-wider uppercase hover:bg-gold-400 transition-colors font-sans"
               >
                 Subscribe
               </button>
@@ -88,7 +88,7 @@ export function Footer() {
             >
               ATELIER
             </Link>
-            <p className="text-stone-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-xs font-sans">
               Crafting timeless elegance through sustainable luxury fashion
               since 2020.
             </p>
@@ -100,13 +100,13 @@ export function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h4 className="text-sm tracking-wider uppercase mb-6">Shop</h4>
+            <h4 className="text-sm tracking-wider uppercase mb-6 text-gold-400 font-sans">Shop</h4>
             <ul className="space-y-3">
               {footerLinks.shop.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone-400 hover:text-white text-sm transition-colors"
+                    className="text-neutral-400 hover:text-gold-400 text-sm transition-colors font-sans"
                   >
                     {link.label}
                   </Link>
@@ -121,13 +121,13 @@ export function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h4 className="text-sm tracking-wider uppercase mb-6">About</h4>
+            <h4 className="text-sm tracking-wider uppercase mb-6 text-gold-400 font-sans">About</h4>
             <ul className="space-y-3">
               {footerLinks.about.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone-400 hover:text-white text-sm transition-colors"
+                    className="text-neutral-400 hover:text-gold-400 text-sm transition-colors font-sans"
                   >
                     {link.label}
                   </Link>
@@ -142,13 +142,13 @@ export function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            <h4 className="text-sm tracking-wider uppercase mb-6">Help</h4>
+            <h4 className="text-sm tracking-wider uppercase mb-6 text-gold-400 font-sans">Help</h4>
             <ul className="space-y-3">
               {footerLinks.help.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-stone-400 hover:text-white text-sm transition-colors"
+                    className="text-neutral-400 hover:text-gold-400 text-sm transition-colors font-sans"
                   >
                     {link.label}
                   </Link>
@@ -163,7 +163,7 @@ export function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <h4 className="text-sm tracking-wider uppercase mb-6">Follow</h4>
+            <h4 className="text-sm tracking-wider uppercase mb-6 text-gold-400 font-sans">Follow</h4>
             <ul className="space-y-3">
               {socialLinks.map((link) => (
                 <li key={link.label}>
@@ -171,7 +171,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-stone-400 hover:text-white text-sm transition-colors"
+                    className="text-neutral-400 hover:text-gold-400 text-sm transition-colors font-sans"
                   >
                     {link.label}
                   </a>
@@ -183,9 +183,9 @@ export function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-stone-800">
+      <div className="border-t border-neutral-800">
         <div className="container mx-auto px-6 lg:px-12 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stone-500">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500 font-sans">
             <p>&copy; {new Date().getFullYear()} ATELIER. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="hover:text-white transition-colors">
