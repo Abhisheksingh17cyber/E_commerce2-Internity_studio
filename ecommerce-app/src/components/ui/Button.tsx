@@ -25,13 +25,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const variants = {
       primary:
-        "bg-stone-900 text-white hover:bg-stone-800 active:bg-stone-950",
+        "bg-neutral-900 text-white hover:bg-gold-600 active:bg-gold-700",
       secondary:
-        "bg-stone-100 text-stone-900 hover:bg-stone-200 active:bg-stone-300",
+        "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300",
       outline:
-        "border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white",
+        "border border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white",
       ghost:
-        "text-stone-900 hover:bg-stone-100 active:bg-stone-200",
+        "text-neutral-900 hover:bg-neutral-100 active:bg-neutral-200",
     };
 
     const sizes = {
@@ -44,7 +44,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <motion.button
         ref={ref}
         className={cn(
-          "relative inline-flex items-center justify-center font-medium tracking-wide transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "relative inline-flex items-center justify-center font-medium tracking-wide transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 font-sans",
           variants[variant],
           sizes[size],
           className

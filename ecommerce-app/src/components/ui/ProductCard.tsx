@@ -68,7 +68,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
     >
       <Link href={`/products/${product.id}`} className="block">
         {/* Image Container */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
+        <div className="relative aspect-[3/4] overflow-hidden bg-neutral-100">
           {/* Primary Image */}
           <Image
             src={product.image}
@@ -99,12 +99,12 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
           {/* Badges */}
           <div className="absolute top-4 left-4 flex flex-col gap-2">
             {product.isNew && (
-              <span className="bg-stone-900 text-white px-3 py-1 text-xs tracking-wider uppercase">
+              <span className="bg-neutral-900 text-white px-3 py-1 text-xs tracking-wider uppercase font-sans">
                 New
               </span>
             )}
             {product.isSale && (
-              <span className="bg-red-600 text-white px-3 py-1 text-xs tracking-wider uppercase">
+              <span className="bg-red-600 text-white px-3 py-1 text-xs tracking-wider uppercase font-sans">
                 Sale
               </span>
             )}
@@ -117,7 +117,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
             transition={{ duration: 0.3 }}
             className="absolute bottom-4 left-4 right-4"
           >
-            <button className="w-full bg-white/90 backdrop-blur-sm text-stone-900 py-3 text-sm tracking-wider uppercase transition-colors hover:bg-white">
+            <button className="w-full bg-white/90 backdrop-blur-sm text-neutral-900 py-3 text-sm tracking-wider uppercase transition-colors hover:bg-gold-400 font-sans">
               Quick View
             </button>
           </motion.div>
@@ -126,17 +126,17 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
         {/* Product Info */}
         <div className="pt-4 space-y-2">
           <div className="flex items-start justify-between gap-2">
-            <h3 className="text-sm font-medium text-stone-900 tracking-wide">
+            <h3 className="text-sm font-medium text-neutral-900 tracking-wide font-sans">
               {product.name}
             </h3>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-stone-900">
+            <span className="text-sm font-medium text-neutral-900 font-sans">
               {formatPrice(product.price)}
             </span>
             {product.originalPrice && (
-              <span className="text-sm text-stone-400 line-through">
+              <span className="text-sm text-neutral-400 line-through font-sans">
                 {formatPrice(product.originalPrice)}
               </span>
             )}
@@ -148,7 +148,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
               {product.colors.map((color, idx) => (
                 <span
                   key={idx}
-                  className="w-4 h-4 rounded-full border border-stone-200 cursor-pointer transition-transform hover:scale-110"
+                  className="w-4 h-4 rounded-full border border-neutral-200 cursor-pointer transition-transform hover:scale-110"
                   style={{ backgroundColor: color }}
                   title={color}
                 />
@@ -164,10 +164,10 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
 export function ProductCardSkeleton() {
   return (
     <div className="animate-pulse">
-      <div className="aspect-[3/4] bg-stone-200 rounded" />
+      <div className="aspect-[3/4] bg-neutral-200 rounded" />
       <div className="pt-4 space-y-2">
-        <div className="h-4 bg-stone-200 rounded w-3/4" />
-        <div className="h-4 bg-stone-200 rounded w-1/4" />
+        <div className="h-4 bg-neutral-200 rounded w-3/4" />
+        <div className="h-4 bg-neutral-200 rounded w-1/4" />
       </div>
     </div>
   );

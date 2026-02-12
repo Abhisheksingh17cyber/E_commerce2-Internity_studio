@@ -45,7 +45,7 @@ export default function ShopPage() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4"
+            className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans"
           >
             Shop
           </motion.p>
@@ -54,7 +54,7 @@ export default function ShopPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <Heading as="h1">All Products</Heading>
+            <Heading as="h1" className="font-serif">All Products</Heading>
           </motion.div>
         </div>
 
@@ -63,7 +63,7 @@ export default function ShopPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12 pb-6 border-b border-stone-200"
+          className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12 pb-6 border-b border-neutral-200"
         >
           {/* Categories */}
           <div className="flex flex-wrap gap-2">
@@ -72,10 +72,10 @@ export default function ShopPage() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={cn(
-                  "px-4 py-2 text-sm tracking-wider transition-colors",
+                  "px-4 py-2 text-sm tracking-wider transition-colors font-sans",
                   activeCategory === category.id
-                    ? "bg-stone-900 text-white"
-                    : "bg-stone-100 text-stone-600 hover:bg-stone-200"
+                    ? "bg-neutral-900 text-white"
+                    : "bg-neutral-100 text-neutral-600 hover:bg-gold-400 hover:text-neutral-900"
                 )}
               >
                 {category.label}
@@ -85,11 +85,11 @@ export default function ShopPage() {
 
           {/* Sort */}
           <div className="flex items-center gap-3">
-            <span className="text-sm text-stone-500">Sort by:</span>
+            <span className="text-sm text-neutral-500 font-sans">Sort by:</span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-transparent border-b border-stone-300 text-sm text-stone-900 py-1 focus:outline-none focus:border-stone-900"
+              className="bg-transparent border-b border-neutral-300 text-sm text-neutral-900 py-1 focus:outline-none focus:border-gold-500 font-sans"
             >
               {sortOptions.map((option) => (
                 <option key={option.id} value={option.id}>
@@ -105,7 +105,7 @@ export default function ShopPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-sm text-stone-500 mb-8"
+          className="text-sm text-neutral-500 mb-8 font-sans"
         >
           Showing {sortedProducts.length} products
         </motion.p>
@@ -120,7 +120,7 @@ export default function ShopPage() {
         {/* Empty State */}
         {sortedProducts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-stone-500 text-lg">
+            <p className="text-neutral-500 text-lg font-sans">
               No products found in this category.
             </p>
           </div>

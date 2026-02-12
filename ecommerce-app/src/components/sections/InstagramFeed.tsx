@@ -51,11 +51,11 @@ export function InstagramFeed() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4"
+            className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans"
           >
             @atelier_official
           </motion.p>
-          <Heading as="h2" animated>
+          <Heading as="h2" animated className="font-serif">
             Follow Our Journey
           </Heading>
         </div>
@@ -75,7 +75,7 @@ export function InstagramFeed() {
                 delay: index * 0.1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group relative aspect-square overflow-hidden bg-stone-100"
+              className="group relative aspect-square overflow-hidden bg-neutral-100"
             >
               <Image
                 src={post.image}
@@ -117,7 +117,7 @@ export function InstagramFeed() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-stone-600 hover:text-stone-900 transition-colors group"
+            className="inline-flex items-center gap-3 text-neutral-600 hover:text-gold-600 transition-colors group font-sans"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

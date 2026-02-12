@@ -239,7 +239,7 @@ export function Navbar() {
                         <Link
                           href={item.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="block py-4 text-2xl font-light text-stone-900 border-b border-stone-100"
+                          className="block py-4 text-2xl font-serif text-neutral-900 border-b border-neutral-100"
                         >
                           {item.label}
                         </Link>
@@ -248,20 +248,20 @@ export function Navbar() {
                   </ul>
                 </nav>
 
-                <div className="pt-8 border-t border-stone-200">
-                  <p className="text-sm text-stone-500 mb-4">
+                <div className="pt-8 border-t border-neutral-200">
+                  <p className="text-sm text-neutral-500 font-sans mb-4">
                     Join our newsletter for 10% off
                   </p>
                   <div className="flex gap-4">
                     <a
                       href="#"
-                      className="text-stone-600 hover:text-stone-900 transition-colors"
+                      className="text-neutral-600 hover:text-gold-600 font-sans transition-colors"
                     >
                       Instagram
                     </a>
                     <a
                       href="#"
-                      className="text-stone-600 hover:text-stone-900 transition-colors"
+                      className="text-neutral-600 hover:text-gold-600 font-sans transition-colors"
                     >
                       Pinterest
                     </a>

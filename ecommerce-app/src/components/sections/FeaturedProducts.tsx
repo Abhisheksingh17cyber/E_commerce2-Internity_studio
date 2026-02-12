@@ -54,7 +54,7 @@ export function FeaturedProducts() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-stone-50 overflow-hidden"
+      className="relative min-h-screen bg-neutral-50 overflow-hidden"
     >
       <div ref={containerRef} className="h-screen flex flex-col justify-center">
         {/* Header */}
@@ -65,11 +65,11 @@ export function FeaturedProducts() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4"
+                className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans"
               >
                 Featured
               </motion.p>
-              <Heading as="h2" animated>
+              <Heading as="h2" animated className="font-serif">
                 New Arrivals
               </Heading>
             </div>
@@ -81,7 +81,7 @@ export function FeaturedProducts() {
             >
               <Link
                 href="/shop"
-                className="hidden md:flex items-center gap-2 text-stone-600 hover:text-stone-900 transition-colors group"
+                className="hidden md:flex items-center gap-2 text-neutral-600 hover:text-gold-600 transition-colors group font-sans"
               >
                 <span className="text-sm tracking-wider">View All Products</span>
                 <svg
@@ -121,9 +121,9 @@ export function FeaturedProducts() {
           <div className="flex-shrink-0 w-[300px] md:w-[350px] flex items-center justify-center">
             <Link
               href="/shop"
-              className="group flex flex-col items-center justify-center w-full aspect-[3/4] bg-stone-900 text-white transition-colors hover:bg-stone-800"
+              className="group flex flex-col items-center justify-center w-full aspect-[3/4] bg-neutral-900 text-white transition-colors hover:bg-gold-600"
             >
-              <span className="text-lg tracking-wider mb-4">View All</span>
+              <span className="text-lg tracking-wider mb-4 font-sans">View All</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -145,10 +145,10 @@ export function FeaturedProducts() {
         {/* Progress Indicator */}
         <div className="container mx-auto px-6 lg:px-12 mt-12">
           <div className="flex items-center gap-4">
-            <span className="text-sm text-stone-500">Scroll to explore</span>
-            <div className="flex-1 h-px bg-stone-300 max-w-[200px]">
+            <span className="text-sm text-neutral-500 font-sans">Scroll to explore</span>
+            <div className="flex-1 h-px bg-neutral-300 max-w-[200px]">
               <motion.div
-                className="h-full bg-stone-900"
+                className="h-full bg-gold-500"
                 style={{ width: "0%" }}
               />
             </div>

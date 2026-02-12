@@ -46,7 +46,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-stone-100">
+    <section className="py-24 md:py-32 lg:py-40 bg-neutral-100">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -54,11 +54,11 @@ export function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4"
+            className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans"
           >
             Testimonials
           </motion.p>
-          <Heading as="h2" animated>
+          <Heading as="h2" animated className="font-serif">
             Client Voices
           </Heading>
         </div>
@@ -75,13 +75,13 @@ export function Testimonials() {
               className="text-center"
             >
               {/* Quote */}
-              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-stone-900 leading-relaxed mb-12">
+              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-light text-neutral-900 leading-relaxed mb-12 font-serif">
                 &ldquo;{testimonials[activeIndex].quote}&rdquo;
               </blockquote>
 
               {/* Author */}
               <div className="flex flex-col items-center gap-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-gold-400">
                   <Image
                     src={testimonials[activeIndex].image}
                     alt={testimonials[activeIndex].author}
@@ -91,10 +91,10 @@ export function Testimonials() {
                   />
                 </div>
                 <div>
-                  <p className="text-stone-900 font-medium">
+                  <p className="text-neutral-900 font-medium font-sans">
                     {testimonials[activeIndex].author}
                   </p>
-                  <p className="text-stone-500 text-sm">
+                  <p className="text-neutral-500 text-sm font-sans">
                     {testimonials[activeIndex].role}
                   </p>
                 </div>
@@ -106,7 +106,7 @@ export function Testimonials() {
           <div className="flex items-center justify-center gap-6 mt-12">
             <button
               onClick={prevTestimonial}
-              className="p-3 border border-stone-300 rounded-full text-stone-600 hover:text-stone-900 hover:border-stone-900 transition-colors"
+              className="p-3 border border-neutral-300 rounded-full text-neutral-600 hover:text-gold-600 hover:border-gold-500 transition-colors"
               aria-label="Previous testimonial"
             >
               <svg
@@ -133,8 +133,8 @@ export function Testimonials() {
                   onClick={() => setActiveIndex(index)}
                   className={`w-2 h-2 rounded-full transition-all ${
                     index === activeIndex
-                      ? "bg-stone-900 w-6"
-                      : "bg-stone-300 hover:bg-stone-400"
+                      ? "bg-gold-500 w-6"
+                      : "bg-neutral-300 hover:bg-gold-400"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -143,7 +143,7 @@ export function Testimonials() {
 
             <button
               onClick={nextTestimonial}
-              className="p-3 border border-stone-300 rounded-full text-stone-600 hover:text-stone-900 hover:border-stone-900 transition-colors"
+              className="p-3 border border-neutral-300 rounded-full text-neutral-600 hover:text-gold-600 hover:border-gold-500 transition-colors"
               aria-label="Next testimonial"
             >
               <svg

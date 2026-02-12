@@ -62,7 +62,7 @@ function CollectionCard({ collection, index, isReversed }: CollectionCardProps) 
         className={`relative overflow-hidden ${isReversed ? "lg:col-start-2" : ""}`}
       >
         <Link href={`/collections/${collection.slug}`} className="block group">
-          <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
+          <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
             <div ref={imageRef} className="absolute inset-0 -top-20 -bottom-20">
               <Image
                 src={collection.image}
@@ -85,17 +85,17 @@ function CollectionCard({ collection, index, isReversed }: CollectionCardProps) 
           href={`/collections/${collection.slug}`}
           className="block group"
         >
-          <p className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4">
+          <p className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans">
             {collection.productCount} pieces
           </p>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-stone-900 mb-6 group-hover:text-stone-600 transition-colors">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900 mb-6 group-hover:text-gold-600 transition-colors font-serif">
             {collection.name}
           </h3>
-          <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-md">
+          <p className="text-neutral-600 text-lg leading-relaxed mb-8 max-w-md font-sans">
             {collection.description}
           </p>
-          <span className="inline-flex items-center gap-2 text-stone-900 group-hover:gap-4 transition-all">
-            <span className="text-sm tracking-wider uppercase">
+          <span className="inline-flex items-center gap-2 text-neutral-900 group-hover:gap-4 transition-all group-hover:text-gold-600">
+            <span className="text-sm tracking-wider uppercase font-sans">
               Explore Collection
             </span>
             <svg
@@ -129,11 +129,11 @@ export function Collections() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-stone-500 text-sm tracking-[0.2em] uppercase mb-4"
+            className="text-gold-500 text-sm tracking-[0.2em] uppercase mb-4 font-sans"
           >
             Curated
           </motion.p>
-          <Heading as="h2" animated>
+          <Heading as="h2" animated className="font-serif">
             Collections
           </Heading>
         </div>

@@ -85,10 +85,10 @@ export function CallToAction() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-white text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-8"
+            className="text-white text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-8 font-serif"
           >
             Experience the
-            <span className="block text-stone-300">Difference</span>
+            <span className="block text-gold-400">Difference</span>
           </motion.h2>
 
           <motion.p
@@ -96,7 +96,7 @@ export function CallToAction() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto"
+            className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto font-sans"
           >
             Visit our flagship store for a personalized styling consultation and
             discover pieces that speak to your individual style.
@@ -112,14 +112,14 @@ export function CallToAction() {
             <Button
               variant="primary"
               size="lg"
-              className="bg-white text-stone-900 hover:bg-stone-100"
+              className="bg-white text-neutral-900 hover:bg-gold-400 hover:text-neutral-900"
             >
               Book Appointment
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-stone-900"
+              className="border-white text-white hover:bg-gold-500 hover:text-neutral-900 hover:border-gold-500"
             >
               Find a Store
             </Button>
