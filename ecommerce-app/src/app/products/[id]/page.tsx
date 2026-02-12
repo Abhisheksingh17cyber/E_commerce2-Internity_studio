@@ -97,7 +97,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             {/* Main Image */}
             <div
               ref={imageRef}
-              className="relative aspect-[3/4] bg-neutral-100 overflow-hidden"
+              className="relative aspect-3/4 bg-neutral-100 overflow-hidden"
             >
               <Image
                 src={images[activeImage]}
@@ -218,7 +218,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       key={size}
                       onClick={() => setSelectedSize(size)}
                       className={cn(
-                        "min-w-[48px] h-12 px-4 border text-sm transition-colors font-sans",
+                        "min-w-12 h-12 px-4 border text-sm transition-colors font-sans",
                         selectedSize === size
                           ? "border-gold-500 bg-gold-500 text-neutral-900"
                           : "border-neutral-200 text-neutral-600 hover:border-gold-500"
@@ -239,7 +239,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="aspect-square !px-0"
+                className="aspect-square px-0!"
                 aria-label="Add to wishlist"
               >
                 <svg

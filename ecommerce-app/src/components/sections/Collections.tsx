@@ -62,7 +62,7 @@ function CollectionCard({ collection, index, isReversed }: CollectionCardProps) 
         className={`relative overflow-hidden ${isReversed ? "lg:col-start-2" : ""}`}
       >
         <Link href={`/collections/${collection.slug}`} className="block group">
-          <div className="relative aspect-[4/5] overflow-hidden bg-neutral-100">
+          <div className="relative aspect-4/5 overflow-hidden bg-neutral-100">
             <div ref={imageRef} className="absolute inset-0 -top-20 -bottom-20">
               <Image
                 src={collection.image}

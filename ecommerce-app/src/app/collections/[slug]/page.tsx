@@ -40,7 +40,7 @@ export default function CollectionDetailPage() {
   return (
     <main className="bg-neutral-50 min-h-screen" aria-label={collection.name}>
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section className="relative h-[60vh] min-h-100 overflow-hidden">
         <Image
           src={collection.image}
           alt={collection.name}
@@ -49,7 +49,7 @@ export default function CollectionDetailPage() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/20" />
         
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 lg:p-16">
           <div className="max-w-7xl mx-auto w-full">
@@ -158,7 +158,7 @@ export default function CollectionDetailPage() {
                 >
                   <Link
                     href={`/collections/${relatedCollection.slug}`}
-                    className="group block relative aspect-[3/2] overflow-hidden bg-neutral-200"
+                    className="group block relative aspect-3/2 overflow-hidden bg-neutral-200"
                   >
                     <Image
                       src={relatedCollection.image}

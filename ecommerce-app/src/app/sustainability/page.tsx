@@ -64,7 +64,7 @@ export default function SustainabilityPage() {
   return (
     <div className="bg-neutral-50">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative h-[80vh] min-h-[600px] overflow-hidden">
+      <section ref={heroRef} className="relative h-[80vh] min-h-150 overflow-hidden">
         <div ref={imageRef} className="absolute inset-0 scale-125">
           <Image
             src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=1920&q=80"
@@ -178,7 +178,7 @@ export default function SustainabilityPage() {
                     {initiative.description}
                   </p>
                 </div>
-                <div className={`relative aspect-[4/3] overflow-hidden ${
+                <div className={`relative aspect-4/3 overflow-hidden ${
                   index % 2 === 1 ? "lg:col-start-1" : ""
                 }`}>
                   <Image

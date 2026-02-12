@@ -58,7 +58,7 @@ export function CallToAction() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[80vh] min-h-[600px] overflow-hidden"
+      className="relative h-[80vh] min-h-150 overflow-hidden"
     >
       {/* Background Image */}
       <div ref={imageRef} className="absolute inset-0 -top-20 -bottom-20">

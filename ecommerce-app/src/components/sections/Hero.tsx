@@ -54,7 +54,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen min-h-[700px] overflow-hidden"
+      className="relative h-screen min-h-175 overflow-hidden"
     >
       {/* Background Image */}
       <div ref={imageRef} className="absolute inset-0 -top-20">
@@ -71,7 +71,7 @@ export function Hero() {
       {/* Overlay */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"
+        className="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-black/60"
       />
 
       {/* Content */}
@@ -120,14 +120,14 @@ export function Hero() {
             <Button
               variant="primary"
               size="lg"
-              className="bg-gold-500 text-neutral-950 hover:bg-gold-400 min-w-[200px] font-sans"
+              className="bg-gold-500 text-neutral-950 hover:bg-gold-400 min-w-50 font-sans"
             >
               Shop Collection
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-neutral-950 min-w-[200px] font-sans"
+              className="border-white text-white hover:bg-white hover:text-neutral-950 min-w-50 font-sans"
             >
               Explore Lookbook
             </Button>

@@ -81,7 +81,7 @@ export function Navbar() {
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 pt-4"
                       >
-                        <div className="bg-white shadow-xl rounded-sm py-4 min-w-[200px]">
+                        <div className="bg-white shadow-xl rounded-sm py-4 min-w-50">
                           {item.children.map((child) => (
                             <Link
                               key={child.label}

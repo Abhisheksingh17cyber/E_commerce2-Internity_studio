@@ -186,7 +186,7 @@ export default function FAQPage() {
                   <span className="font-serif text-lg text-neutral-900">
                     {item.question}
                   </span>
-                  <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                  <span className="shrink-0 w-6 h-6 flex items-center justify-center">
                     <motion.span
                       animate={{ rotate: openQuestions.includes(item.question) ? 45 : 0 }}
                       className="block w-4 h-0.5 bg-neutral-900 relative"

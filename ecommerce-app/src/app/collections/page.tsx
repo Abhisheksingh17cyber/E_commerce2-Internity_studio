@@ -52,7 +52,7 @@ export default function CollectionsPage() {
               >
                 <Link 
                   href={`/collections/${collection.slug}`}
-                  className="group block relative aspect-[4/5] overflow-hidden bg-neutral-100"
+                  className="group block relative aspect-4/5 overflow-hidden bg-neutral-100"
                 >
                   <Image
                     src={collection.image}
@@ -61,7 +61,7 @@ export default function CollectionsPage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
                   
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">

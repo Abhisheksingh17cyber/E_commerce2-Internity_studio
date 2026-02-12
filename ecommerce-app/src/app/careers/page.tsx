@@ -87,7 +87,7 @@ export default function CareersPage() {
   return (
     <main className="bg-neutral-50 min-h-screen" aria-label="Careers">
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+      <section className="relative h-[70vh] min-h-125 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"

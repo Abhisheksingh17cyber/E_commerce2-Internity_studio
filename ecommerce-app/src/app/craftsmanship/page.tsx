@@ -63,7 +63,7 @@ export default function CraftsmanshipPage() {
   return (
     <main className="bg-neutral-50 min-h-screen" aria-label="Craftsmanship">
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+      <section className="relative h-[80vh] min-h-150 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1920&q=80"
@@ -144,7 +144,7 @@ export default function CraftsmanshipPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className={`relative aspect-[4/5] overflow-hidden ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                className={`relative aspect-4/5 overflow-hidden ${index % 2 === 1 ? "lg:order-1" : ""}`}
               >
                 <Image
                   src={section.image}

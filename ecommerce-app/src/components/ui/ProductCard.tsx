@@ -68,7 +68,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
     >
       <Link href={`/products/${product.id}`} className="block">
         {/* Image Container */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-neutral-100">
+        <div className="relative aspect-3/4 overflow-hidden bg-neutral-100">
           {/* Primary Image */}
           <Image
             src={product.image}
@@ -164,7 +164,7 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
 export function ProductCardSkeleton() {
   return (
     <div className="animate-pulse">
-      <div className="aspect-[3/4] bg-neutral-200 rounded" />
+      <div className="aspect-3/4 bg-neutral-200 rounded" />
       <div className="pt-4 space-y-2">
         <div className="h-4 bg-neutral-200 rounded w-3/4" />
         <div className="h-4 bg-neutral-200 rounded w-1/4" />

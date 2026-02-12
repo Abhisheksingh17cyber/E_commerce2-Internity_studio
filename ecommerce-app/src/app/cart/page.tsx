@@ -117,7 +117,7 @@ export default function CartPage() {
                   className="flex gap-6 py-8 border-b border-neutral-200"
                 >
                   {/* Image */}
-                  <div className="relative w-28 h-36 bg-neutral-100 flex-shrink-0">
+                  <div className="relative w-28 h-36 bg-neutral-100 shrink-0">
                     <Image
                       src={item.image}
                       alt={item.name}

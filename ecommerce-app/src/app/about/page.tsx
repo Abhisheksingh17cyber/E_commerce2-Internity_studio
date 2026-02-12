@@ -65,7 +65,7 @@ export default function AboutPage() {
   return (
     <div className="bg-neutral-50">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative h-[70vh] min-h-[500px] overflow-hidden">
+      <section ref={heroRef} className="relative h-[70vh] min-h-125 overflow-hidden">
         <div ref={imageRef} className="absolute inset-0 scale-110">
           <Image
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
@@ -138,7 +138,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative aspect-[4/5] overflow-hidden"
+              className="relative aspect-4/5 overflow-hidden"
             >
               <Image
                 src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80"
