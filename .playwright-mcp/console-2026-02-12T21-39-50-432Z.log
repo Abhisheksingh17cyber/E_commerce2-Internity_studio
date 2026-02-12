@@ -1,2 +1,4 @@
 [    1394ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/collections:0
 [   71427ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/collections?_rsc=kw9md:0
+[  118595ms] [WARNING] Image with src "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
