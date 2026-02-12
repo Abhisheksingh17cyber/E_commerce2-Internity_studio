@@ -80,6 +80,31 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), Georgia, "Times New Roman", serif;
+  
+  /* Neutral Colors */
+  --color-neutral-50: #faf9f7;
+  --color-neutral-100: #f5f4f1;
+  --color-neutral-200: #e8e6e1;
+  --color-neutral-300: #d4d1c9;
+  --color-neutral-400: #9e9a8f;
+  --color-neutral-500: #6b6860;
+  --color-neutral-600: #4a4844;
+  --color-neutral-700: #363533;
+  --color-neutral-800: #252422;
+  --color-neutral-900: #1a1a1a;
+  --color-neutral-950: #0f0f0e;
+  
+  /* Gold Accent Colors */
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f9f4e8;
+  --color-gold-200: #f0e4c8;
+  --color-gold-300: #e4ce9a;
+  --color-gold-400: #d4b06a;
+  --color-gold-500: #c49a4b;
+  --color-gold-600: #a67c3c;
+  --color-gold-700: #8a6333;
+  --color-gold-800: #6d4e2d;
+  --color-gold-900: #5a4028;
 }
 
 /* ===============================================
