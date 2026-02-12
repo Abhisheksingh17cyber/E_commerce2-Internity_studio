@@ -18,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://atelier-ecommerce.vercel.app"),
   title: "ATELIER | Premium Contemporary Fashion",
   description:
     "Discover timeless elegance through sustainable luxury fashion. Curated collections crafted with intention for the modern wardrobe.",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://atelier.com",
+    url: "https://atelier-ecommerce.vercel.app",
     siteName: "ATELIER",
     title: "ATELIER | Premium Contemporary Fashion",
     description:
